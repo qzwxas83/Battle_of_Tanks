@@ -20,6 +20,7 @@ for row in map:
             blocks_list.append(Block(x, y, 1, wall_image1))
         elif i == 2:
             blocks_list.append(Block(x, y, 2, wall_image2))
+        x += STEP
 
 
 is_game_running = True
