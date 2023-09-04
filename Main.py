@@ -8,6 +8,7 @@ pygame.init()
 
 x = 0
 y = 0
+blocks_list = []
 
 
 is_game_running = True
