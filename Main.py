@@ -6,6 +6,9 @@ from Modules.Classes import *
 
 pygame.init()
 
+x = 0
+y = 0
+
 
 is_game_running = True
 while is_game_running:
