@@ -21,6 +21,8 @@ for row in map:
         elif i == 2:
             blocks_list.append(Block(x, y, 2, wall_image2))
         x += STEP
+        y += STEP
+        x = 0
 
 
 is_game_running = True
