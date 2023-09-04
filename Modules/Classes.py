@@ -2,9 +2,9 @@ import pygame
 import os
 
 PATH = os.path.abspath(__file__ + '/../..')
-SCREEN_WIDTH = 1400
-SCREEN_HEIGHT = 800
-STEP = 50
+SCREEN_WIDTH = 1540
+SCREEN_HEIGHT = 880
+STEP = 55
 
 window = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Batle of Tanks')
