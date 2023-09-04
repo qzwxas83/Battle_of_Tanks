@@ -10,6 +10,10 @@ x = 0
 y = 0
 blocks_list = []
 
+for row in map:
+    for i in row:
+        if i == 1:
+
 
 is_game_running = True
 while is_game_running:
