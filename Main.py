@@ -2,6 +2,7 @@ import pygame
 import os
 import random
 from Modules.Classes import *
+from Modules.mapsetting import map
 
 
 pygame.init()
