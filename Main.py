@@ -10,7 +10,7 @@ x = 0
 y = 0
 blocks_list = []
 
-wall_image1 = os.path
+wall_image1 = os.path.join()
 
 for row in map:
     for i in row:
