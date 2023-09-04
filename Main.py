@@ -27,7 +27,7 @@ for row in map:
 
 is_game_running = True
 while is_game_running:
-    window.fill((255, 0, 0))
+    window.fill((94, 32, 16))
     for block in blocks_list:
         block.blit()
     for event in pygame.event.get():
