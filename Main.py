@@ -12,12 +12,12 @@ y = 0
 blocks_list = []
 
 wall_image1 = os.path.join(PATH, 'images/wall.png')
+wall_image2 = os.path.join(PATH, 'images/wall1.png')
 
 for row in map:
     for i in row:
         if i == 1:
             blocks_list.append(Block(x, y, ))
-        x += 10
 
 
 is_game_running = True
