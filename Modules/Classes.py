@@ -15,6 +15,7 @@ class Block(pygame.Rect):
         super().__init__(x, y, STEP, STEP)
         self.image = pygame.image.load(image)
         self.image = pygame.transform.scale(self.image, (STEP, STEP))
+        self.type_block = type_block
 class Bullet(pygame.Rect):
     pass
 
