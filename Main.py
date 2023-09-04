@@ -30,6 +30,7 @@ for row in map:
 
 is_game_running = True
 while is_game_running:
+    window.blit(background, (0, 0))
     for block in blocks_list:
         block.blit()
     for event in pygame.event.get():
