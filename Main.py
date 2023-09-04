@@ -7,6 +7,8 @@ from Modules.mapsetting import map
 
 pygame.init()
 
+background = pygame.image.load(os.path.join(PATH, 'images/background.png'))
+
 x = 0
 y = 0
 blocks_list = []
