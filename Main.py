@@ -10,9 +10,13 @@ x = 0
 y = 0
 blocks_list = []
 
+wall_image1 = os.path
+
 for row in map:
     for i in row:
         if i == 1:
+            blocks_list.append(Block(x, y, ))
+        x += 10
 
 
 is_game_running = True
