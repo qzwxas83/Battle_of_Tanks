@@ -17,7 +17,9 @@ wall_image2 = os.path.join(PATH, 'images/wall1.png')
 for row in map:
     for i in row:
         if i == 1:
-            blocks_list.append(Block(x, y, ))
+            blocks_list.append(Block(x, y, 1, wall_image1))
+        elif i == 2:
+            blocks_list.append(Block(x, y, 2, wall_image2))
 
 
 is_game_running = True
