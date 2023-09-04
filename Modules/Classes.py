@@ -13,6 +13,8 @@ pygame.display.set_caption('Batle of Tanks')
 class Block(pygame.Rect):
     def __init__(self, x, y, type_block, image):
         super().__init__(x, y, STEP, STEP)
+        self.image = pygame.image.load(image)
+        self.image = pygame.transform.scale(self.image, (STEP, STEP))
 class Bullet(pygame.Rect):
     pass
 
