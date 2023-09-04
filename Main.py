@@ -8,6 +8,7 @@ from Modules.mapsetting import map
 pygame.init()
 
 background = pygame.image.load(os.path.join(PATH, 'images/background.png'))
+background = pygame.transform.scale(background, (SCREEN_HEIGHT, SCREEN_WIDTH))
 
 x = 0
 y = 0
