@@ -29,6 +29,7 @@ for row in map:
 
     player1 = Player(1,1)
 
+    clock = pygame.time.Clock()
 
 is_game_running = True
 while is_game_running:
