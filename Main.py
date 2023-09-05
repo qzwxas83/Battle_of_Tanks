@@ -27,6 +27,8 @@ for row in map:
     y += STEP
     x = 0
 
+    player1 = Player
+
 
 is_game_running = True
 while is_game_running:

@@ -32,7 +32,34 @@ class Panzar(pygame.Rect):
         pass
     def blit(self):
         window.blit(self.image, (self.x, self.y))
+    def rotate_to(self, angle):
+        rotate = (360 - self.angle + angle)
+        self.angle = angle
+        self.image = pygame.transform.rotate(self.image, rotate)
+
 class Player(Panzar):
-    pass
+    def __init__(self, x, y):
+        super().__init_(x, y)
+        self.image = pygame.image.load(os.path.join(PATH, 'images/panzer.png'))
+        self.image = pygame.transform.scale(self.image, (STEP, STEP))
+    def move(self):
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_w]:
+            self.y -= STEP
+            self.pos[1] -= 1
+            self.rotate_to(0)
+        elif keys[pygame.K_s]:
+            self.y += STEP
+            self.pos[1] += 1
+            self.rotate_to(180)
+        elif keys[pygame.K_a]:
+            self.x -= STEP
+            self.pos[0] -= 1
+            self.rotate_to(90)
+        elif keys[pygame.K_d]:
+            self.x += STEP
+            self.pos[0] += 1
+            self.rotate_to(270)
+
 class Player2(Panzar):
     pass
