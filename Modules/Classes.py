@@ -23,7 +23,7 @@ class Bullet(pygame.Rect):
 
 class Panzar(pygame.Rect):
     def __init__(self, x, y):
-        super().__init_(x * STEP, y * STEP, STEP, STEP)
+        super().__init__(x * STEP, y * STEP, STEP, STEP)
         self.image = None
         self.pos = [x, y]
 
