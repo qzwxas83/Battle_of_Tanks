@@ -22,7 +22,16 @@ class Bullet(pygame.Rect):
     pass
 
 class Panzar(pygame.Rect):
-    pass
+    def __init__(self, x, y):
+        super().__init_(x * STEP, y * STEP, STEP, STEP)
+        self.image = None
+        self.pos = [x, y]
+
+        self.angle = 0
+    def move(self):
+        pass
+    def blit(self):
+        window.blit(self.image, (self.x, self.y))
 class Player(Panzar):
     pass
 class Player2(Panzar):
