@@ -1,10 +1,12 @@
 import pygame
 import os
+from Modules.mapsetting import map
 
 PATH = os.path.abspath(__file__ + '/../..')
-SCREEN_WIDTH = 1534
-SCREEN_HEIGHT = 875
-STEP = 40.50
+SCREEN_WIDTH = 1540
+SCREEN_HEIGHT = 790
+STEP = 39.5
+STEP_TANK = 1
 
 window = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Batle of Tanks')
@@ -42,23 +44,24 @@ class Player(Panzar):
     def __init__(self, x, y):
         super().__init__(x, y)
         self.image = pygame.image.load(os.path.join(PATH, 'images/panzer.png'))
-        self.image = pygame.transform.scale(self.image, (STEP, STEP))
+        self.image = pygame.transform.scale(self.image, (STEP - 4, STEP - 4))
     def move(self):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_w]:
-            self.y -= STEP
+
+            self.y -= STEP_TANK
             self.pos[1] -= 1
             self.rotate_to(0)
         elif keys[pygame.K_s]:
-            self.y += STEP
+            self.y += STEP_TANK
             self.pos[1] += 1
             self.rotate_to(180)
         elif keys[pygame.K_a]:
-            self.x -= STEP
+            self.x -= STEP_TANK
             self.pos[0] -= 1
             self.rotate_to(90)
         elif keys[pygame.K_d]:
-            self.x += STEP
+            self.x += STEP_TANK
             self.pos[0] += 1
             self.rotate_to(270)
 
