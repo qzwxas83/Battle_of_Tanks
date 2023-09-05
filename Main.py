@@ -27,7 +27,7 @@ for row in map:
     y += STEP
     x = 0
 
-    player1 = Player
+    player1 = Player(1,1)
 
 
 is_game_running = True
@@ -35,6 +35,7 @@ while is_game_running:
     window.blit(background, (0, 0))
     for block in blocks_list:
         block.blit()
+    player1.blit()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             is_game_running = False

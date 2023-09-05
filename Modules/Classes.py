@@ -31,6 +31,7 @@ class Panzar(pygame.Rect):
     def move(self):
         pass
     def blit(self):
+        self.move()
         window.blit(self.image, (self.x, self.y))
     def rotate_to(self, angle):
         rotate = (360 - self.angle + angle)
