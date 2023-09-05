@@ -48,21 +48,27 @@ class Player(Panzar):
     def move(self):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_w]:
-
-            self.y -= STEP_TANK
-            self.pos[1] -= 1
+            if map[self.pos[1] - 1][self.pos[0]] == 0:
+                self.y -= STEP_TANK
+                self.pos[1] -= 1
             self.rotate_to(0)
+
         elif keys[pygame.K_s]:
-            self.y += STEP_TANK
-            self.pos[1] += 1
+            if map[self.pos[1] + 1][self.pos[0]] == 0:
+                self.y += STEP_TANK
+                self.pos[1] += 1
             self.rotate_to(180)
+
         elif keys[pygame.K_a]:
-            self.x -= STEP_TANK
-            self.pos[0] -= 1
+            if map[self.pos[1]][self.pos[0] - 1] == 0:
+                self.x -= STEP_TANK
+                self.pos[0] -= 1
             self.rotate_to(90)
+
         elif keys[pygame.K_d]:
-            self.x += STEP_TANK
-            self.pos[0] += 1
+            if map[self.pos[1]][self.pos[0] + 1] == 0:
+                self.x += STEP_TANK
+                self.pos[0] += 1
             self.rotate_to(270)
 
 class Player2(Panzar):
