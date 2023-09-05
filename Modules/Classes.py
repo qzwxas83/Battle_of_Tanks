@@ -44,7 +44,7 @@ class Player(Panzar):
     def __init__(self, x, y):
         super().__init__(x, y)
         self.image = pygame.image.load(os.path.join(PATH, 'images/panzer.png'))
-        self.image = pygame.transform.scale(self.image, (STEP - 4, STEP - 4))
+        self.image = pygame.transform.scale(self.image, (STEP - 6, STEP - 6))
     def move(self):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_w]:
