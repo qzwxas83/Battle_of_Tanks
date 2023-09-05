@@ -40,7 +40,7 @@ class Panzar(pygame.Rect):
 
 class Player(Panzar):
     def __init__(self, x, y):
-        super().__init_(x, y)
+        super().__init__(x, y)
         self.image = pygame.image.load(os.path.join(PATH, 'images/panzer.png'))
         self.image = pygame.transform.scale(self.image, (STEP, STEP))
     def move(self):
