@@ -40,6 +40,11 @@ class Bullet(pygame.Rect):
             elif self.direction == 270:
                 self.x += self.speed
             self.count -= 1
+            if self.count == 0:
+                self.stop()
+    def stop(self):
+        self.count = 0
+        self.x = 100000
 
 class Panzar(pygame.Rect):
     def __init__(self, x, y):
