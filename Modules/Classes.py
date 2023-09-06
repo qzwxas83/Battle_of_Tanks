@@ -51,6 +51,7 @@ class Panzar(pygame.Rect):
         super().__init__(x * STEP, y * STEP, STEP, STEP)
         self.image = None
         self.pos = [x, y]
+        self.bullet = Bullet(x, y)
 
         self.angle = 0
     def move(self):
@@ -62,6 +63,12 @@ class Panzar(pygame.Rect):
         rotate = (360 - self.angle + angle)
         self.angle = angle
         self.image = pygame.transform.rotate(self.image, rotate)
+    def strike(self):
+        if self.bullet.count == 0:
+            self.bullet.x = self.x + STEP / 2 - 10
+            self.bullet.y = self.y + STEP / 2 - 10
+            self.bullet.count = 10
+            self.bullet.direction = self.direction
 
 class Player(Panzar):
     def __init__(self, x, y):
