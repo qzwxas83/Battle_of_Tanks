@@ -31,6 +31,15 @@ class Bullet(pygame.Rect):
     def move(self):
         if self.count != 0:
             window.blit(self.image, (self.x, self.y))
+            if self.direction == 0:
+                self.y -= self.speed
+            elif self.direction == 180:
+                self.y += self.speed
+            elif self.direction == 90:
+                self.x -= self.speed
+            elif self.direction == 270:
+                self.x += self.speed
+            self.count -= 1
 
 class Panzar(pygame.Rect):
     def __init__(self, x, y):
