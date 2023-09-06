@@ -36,6 +36,8 @@ while is_game_running:
     window.blit(background, (0, 0))
     for block in blocks_list:
         block.blit()
+    player1.bullet.move()
+    player2.bullet.move()
     player1.blit()
     player2.blit()
     for event in pygame.event.get():

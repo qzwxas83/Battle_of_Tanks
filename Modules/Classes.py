@@ -68,7 +68,7 @@ class Panzar(pygame.Rect):
             self.bullet.x = self.x + STEP / 2 - 10
             self.bullet.y = self.y + STEP / 2 - 10
             self.bullet.count = 10
-            self.bullet.direction = self.direction
+            self.bullet.direction = self.angle
 
 class Player(Panzar):
     def __init__(self, x, y):
@@ -127,5 +127,5 @@ class Player2(Panzar):
                 self.x += STEP
                 self.pos[0] += 1
             self.rotate_to(270)
-        elif keys[pygame.K_0]:
+        elif keys[pygame.K_KP0]:
             self.strike()
