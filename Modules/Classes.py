@@ -10,7 +10,7 @@ STEP = 39
 #STEP_TANK = 1
 
 window = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption('Batle of Tanks')
+pygame.display.set_caption('Battle of Tanks')
 
 
 class Block(pygame.Rect):
@@ -23,9 +23,9 @@ class Block(pygame.Rect):
         window.blit(self.image, (self.x, self.y))
 class Bullet(pygame.Rect):
     def __init__(self, x, y):
-        super().__init__(x, y, 9, 9)
+        super().__init__(x, y, 9.5, 9.5)
         self.image = pygame.image.load(os.path.join(PATH, 'images/bullet.png'))
-        self.image = pygame.transform.scale(self.image, (9, 9))
+        self.image = pygame.transform.scale(self.image, (9.5, 9.5))
         self.direction = None
         self.speed = 39
         self.count = 0
@@ -54,7 +54,7 @@ class Panzar(pygame.Rect):
         self.pos = [x, y]
         self.bullet = Bullet(x, y)
 
-        self.angle = 0
+        self.angle = 0 
     def move(self):
         pass
     def blit(self):
