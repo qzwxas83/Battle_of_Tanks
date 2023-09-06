@@ -1,3 +1,4 @@
+from asyncio import Event
 import pygame
 import os
 from Modules.mapsetting import map
@@ -97,6 +98,8 @@ class Player(Panzar):
                 self.x += STEP
                 self.pos[0] += 1
             self.rotate_to(270)
+        elif Event.type == pygame.MOUSEBUTTONDOWN:
+            self.strike()
 
 class Player2(Panzar):
     def __init__(self, x, y):
@@ -125,3 +128,5 @@ class Player2(Panzar):
                 self.x += STEP
                 self.pos[0] += 1
             self.rotate_to(270)
+        elif keys[pygame.K_SPACE]:
+            self.strike()
