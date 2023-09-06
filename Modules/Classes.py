@@ -97,7 +97,7 @@ class Player(Panzar):
                 self.x += STEP
                 self.pos[0] += 1
             self.rotate_to(270)
-        elif keys[pygame.K_z]:
+        elif keys[pygame.K_SPACE]:
             self.strike()
 
 class Player2(Panzar):
