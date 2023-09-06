@@ -25,6 +25,12 @@ class Bullet(pygame.Rect):
         super().__init__(x, y, 9, 9)
         self.image = pygame.image.load(os.path.join(PATH, 'images/bullet.png'))
         self.image = pygame.transform.scale(self.image, (9, 9))
+        self.direction = None
+        self.speed = 39
+        self.count = 0
+    def move(self):
+        if self.count != 0:
+            window.blit(self.image, (self.x, self.y))
 
 class Panzar(pygame.Rect):
     def __init__(self, x, y):
