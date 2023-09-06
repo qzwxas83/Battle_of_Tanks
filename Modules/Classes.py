@@ -65,8 +65,8 @@ class Panzar(pygame.Rect):
         self.angle = angle
         self.image = pygame.transform.rotate(self.image, rotate)
     def strike(self):
-            self.bullet.x = self.x + STEP / 2 - 10
-            self.bullet.y = self.y + STEP / 2 - 10
+            self.bullet.x = self.x + STEP / 2 - 5.2
+            self.bullet.y = self.y + STEP / 2 - 0.08
             self.bullet.count = 10
             self.bullet.direction = self.angle
 
