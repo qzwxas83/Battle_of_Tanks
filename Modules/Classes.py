@@ -21,7 +21,10 @@ class Block(pygame.Rect):
     def blit(self):
         window.blit(self.image, (self.x, self.y))
 class Bullet(pygame.Rect):
-    pass
+    def __init__(self, x, y):
+        super().__init__(x, y, 9, 9)
+        self.image = pygame.image.load(os.path.join(PATH, 'images/bullet.png'))
+        self.image = pygame.transform.scale(self.image, (9, 9))
 
 class Panzar(pygame.Rect):
     def __init__(self, x, y):
