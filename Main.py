@@ -27,9 +27,10 @@ for row in map:
     y += STEP
     x = 0
 
-    player1 = Player(1,1)
+player1 = Player(1,1)
+player2 = Player2(37,18)
 
-    clock = pygame.time.Clock()
+clock = pygame.time.Clock()
 
 is_game_running = True
 while is_game_running:
@@ -37,8 +38,9 @@ while is_game_running:
     for block in blocks_list:
         block.blit()
     player1.blit()
+    player2.blit()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             is_game_running = False
-    clock.tick(120)
+    clock.tick(10)
     pygame.display.flip()
