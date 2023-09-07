@@ -11,7 +11,6 @@ STEP = 39
 window = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Battle of Tanks')
 
-
 class Block(pygame.Rect):
     def __init__(self, x, y, type_block, image):
         super().__init__(x, y, STEP, STEP)
