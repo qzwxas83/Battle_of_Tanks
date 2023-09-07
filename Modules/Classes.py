@@ -1,4 +1,4 @@
-from asyncio import Event
+
 import pygame
 import os
 from Modules.mapsetting import map
@@ -7,7 +7,6 @@ PATH = os.path.abspath(__file__ + '/../..')
 SCREEN_WIDTH = 1521
 SCREEN_HEIGHT = 780
 STEP = 39
-#STEP_TANK = 1
 
 window = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Battle of Tanks')
