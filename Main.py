@@ -11,8 +11,8 @@ background = pygame.image.load(os.path.join(PATH, 'images/background.png'))
 background = pygame.transform.scale(background, (SCREEN_WIDTH, SCREEN_HEIGHT))
 
 font = pygame.font.Font(None, 120)
-winner1_text = font.render('BLUE WIN', True, (0, 0, 255))
-winner2_text = font.render('RED WIN', True, (255, 0, 0))
+winner1_text = font.render('PLAYER-1 WIN', True, (0, 0, 0))
+winner2_text = font.render('PLAYER-2 WIN', True, (0, 0, 0))
 
 x = 0
 y = 0
