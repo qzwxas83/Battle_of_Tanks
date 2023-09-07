@@ -59,11 +59,11 @@ while is_game_running:
     player1.blit()
     player2.blit()
     if player1.colliderect(player2.bullet):
-        winner = 1
+        winner = 2
         is_game_running = False
         is_winner = True
     elif player2.colliderect(player1.bullet):
-        winner = 2
+        winner = 1
         is_game_running = False
         is_winner = True
 
@@ -72,4 +72,15 @@ while is_game_running:
             is_game_running = False
     clock.tick(10)
     pygame.display.flip()
-
+cors = (SCREEN_WIDTH // 2 - winner1_text.get_width() // 2, 
+        SCREEN_HEIGHT // 2 - winner1_text.get_height() // 2)
+while is_winner:
+    window.blit(background, (0, 0))
+    if winner == 1:
+        window.blit (winner1_text, cors)
+    elif winner == 2:
+        window.blit(winner2_text, cors)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            is_winner = False
+    pygame.display.flip()
