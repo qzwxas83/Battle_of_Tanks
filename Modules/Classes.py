@@ -7,6 +7,8 @@ PATH = os.path.abspath(__file__ + '/../..')
 SCREEN_WIDTH = 1521
 SCREEN_HEIGHT = 780
 STEP = 39
+# shot = pygame.mixer.Sound(file_path: str) -> Sound
+
 
 window = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Battle of Tanks')
@@ -73,6 +75,7 @@ class Player(Panzar):
         super().__init__(x, y)
         self.image = pygame.image.load(os.path.join(PATH, 'images/panzer.png'))
         self.image = pygame.transform.scale(self.image, (STEP, STEP))
+        self.rotate_to(180)
     def move(self):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_w]:

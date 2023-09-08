@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
         "colliderect",
-        "MOUSEBUTTONDOWN"
+        "MOUSEBUTTONDOWN",
+        "pyaudio",
+        "pyglet"
     ]
 }
